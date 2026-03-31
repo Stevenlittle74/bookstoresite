@@ -1,206 +1,61 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Heaven Bookstore - Home</title>
-    <!-- Importing Comfortaa font for subtitles -->
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Color Palette 1 & Typography Option 2 Integration */
-        body {
-            background-color: #FFF7EE; /* Parchment White background */
-            color: #303030; /* Bookish Black text for readability */
-            font-family: Calibri, sans-serif; /* Body font */
-            margin: 0;
-            padding: 0;
-        }
-        h1, h2, h3 {
-            font-family: Arial, sans-serif; /* Arial Bold for headings */
-            font-weight: bold;
-            color: #2E4057; /* Inkwell Blue */
-        }
-        .subtitle {
-            font-family: 'Comfortaa', cursive; /* Comfortaa for subtitles */
-            color: #2E4057;
-        }
-        
-        /* Header & Footer Styling */
-        header, footer {
-            background-color: #2E4057; /* Inkwell Blue background */
-            color: #FFF7EE;
-            padding: 20px;
-        }
-        header a, footer a {
-            color: #FFF7EE;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            font-family: Arial, sans-serif;
-        }
-        .header-content {
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            max-width: 1200px; 
-            margin: auto;
-        }
-        .search-bar {
-            display: inline-block;
-            margin-left: 15px;
-        }
-
-        /* Buttons */
-        .btn-primary {
-            background-color: #C7B65E; /* Aged Gold button */
-            color: #303030;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-            border-radius: 4px;
-        }
-        .btn-secondary {
-            background-color: #F7B3CC; /* Dusty Rose button */
-            color: #303030;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-            margin: 5px;
-            border-radius: 4px;
-        }
-
-        /* Layout Structure */
-        main {
-            padding: 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        .welcome-section {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .featured-book {
-            display: flex;
-            align-items: center;
-            border: 2px solid #2E4057;
-            padding: 20px;
-            background-color: #fff;
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        .categories-section {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .cta-section {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .footer-flex {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            max-width: 1000px;
-            margin: auto;
-            text-align: center;
-            line-height: 1.8;
-        }
-    </style>
+    <title>Home - Book Haven Bookstore</title>
 </head>
 <body>
-
-    <!-- Header / Navigation (Matching Desktop Homepage Wireframe) -->
     <header>
-        <div class="header-content">
-            <div class="logo-container">
-                <a href="index.html">
-                    <!-- Integrating updated logo image inside the images folder -->
-                    <img src="images/Logo.png" alt="Book Heaven Bookstore Logo" height="60" style="vertical-align: middle;">
-                </a>
-            </div>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="about.html">About Us</a>
-                <a href="staff.html">Staff Picks</a>
-                <a href="contact.html">Contact</a>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search titles...">
-                    <button type="button">Search</button>
-                </div>
-            </nav>
-        </div>
+        <img src="Logo.png" alt="Book Haven Bookstore Logo">
+        <h1>Book Haven Bookstore</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us / Contact</a></li>
+                <li><a href="staff-picks.html">Staff Picks</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <!-- Welcome Section -->
-        <section class="welcome-section">
-            <h1>Welcome to Book Heaven!</h1>
-            <p>Discover your next great read in an inviting, literary-focused space.</p>
+        <section>
+            <h2>Celebrating the Written Word</h2>
+            <p>
+                [span_3](start_span)Book Haven Bookstore is a local treasure for book enthusiasts.[span_3](end_span) 
+                We offer a diverse selection of books, magazines, journals, and office supplies 
+                [span_4](start_span)[span_5](start_span)to support your intellectual growth.[span_4](end_span)[span_5](end_span)
+            </p>
         </section>
 
-        <!-- Featured Book Section -->
-        <section class="featured-book">
-            <div class="book-cover">
-                <!-- Integrating updated featured book image inside the images folder -->
-                <img src="images/Client3_Book1.png" alt="Brie Mine 4Ever Book Cover" width="220">
-            </div>
-            <div class="book-details">
-                <h2 class="subtitle">Featured Book</h2>
-                <h3>Brie Mine 4Ever</h3>
-                <p>A delectable symphony of romance and cheese that will melt your heart as effectively as it does the finest brie.</p>
-                <button class="btn-primary">Learn More</button>
-            </div>
+        <section>
+            <h3>Featured for You</h3>
+            <img src="Client3_Book1.png" alt="Featured Book Selection">
+            [span_6](start_span)<p>Explore our inviting digital space designed to encourage literary discovery.[span_6](end_span)</p>
+            <button>Learn More</button>
         </section>
 
-        <!-- Categories Section -->
-        <section class="categories-section">
-            <h2 class="subtitle">Categories</h2>
-            <div>
-                <button class="btn-secondary">Fiction</button>
-                <button class="btn-secondary">Non-Fiction</button>
-                <button class="btn-secondary">Mystery</button>
-                <button class="btn-secondary">Sci-Fi & Fantasy</button>
-            </div>
-        </section>
-
-        <!-- Call to Action Section -->
-        <section class="cta-section">
-            <a href="staff.html"><button class="btn-secondary">View More Staff Picks</button></a>
-            <a href="gallery.html"><button class="btn-secondary">View Gallery</button></a>
+        <section>
+            <h3>Why Shop with Us?</h3>
+            <ul>
+                [span_7](start_span)<li>Curated selection for avid readers and students[span_7](end_span)</li>
+                [span_8](start_span)<li>High-quality office essentials and stationery[span_8](end_span)</li>
+                [span_9](start_span)<li>A vibrant community focused on a love for reading[span_9](end_span)</li>
+            </ul>
         </section>
     </main>
 
-    <!-- Footer (Matching Desktop Homepage Wireframe) -->
     <footer>
-        <div class="footer-flex">
-            <div>
-                <strong class="subtitle" style="color:#C7B65E;">Hours</strong><br>
-                Mon-Sat: 9am-8pm<br>
-                Sun: 10am-6pm
-            </div>
-            <div>
-                <strong class="subtitle" style="color:#C7B65E;">Contact Info</strong><br>
-                (555) 123-4567<br>
-                123 Novel Way
-            </div>
-            <div>
-                <strong class="subtitle" style="color:#C7B65E;">Social Links</strong><br>
-                <a href="#">Facebook</a><br>
-                <a href="#">Instagram</a>
-            </div>
-            <div>
-                <strong class="subtitle" style="color:#C7B65E;">Policies</strong><br>
-                <a href="#">Privacy Policy</a><br>
-                <a href="#">Terms & Conditions</a>
-            </div>
-        </div>
+        <section>
+            <h4>Hours of Operation</h4>
+            <ul>
+                [span_10](start_span)<li>Monday-Friday: 9 a.m. to 8 p.m.[span_10](end_span)</li>
+                [span_11](start_span)<li>Saturday: 10 a.m. to 6 p.m.[span_11](end_span)</li>
+                [span_12](start_span)<li>Sunday: 11 a.m. to 5 p.m.[span_12](end_span)</li>
+            </ul>
+        </section>
+        <p>Contact Info | Social Links | Policies</p>
     </footer>
-
 </body>
 </html>

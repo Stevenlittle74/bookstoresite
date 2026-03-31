@@ -1,264 +1,180 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Heaven Bookstore - Gallery</title>
-    <!-- Importing Comfortaa font for subtitles -->
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Color Palette 1 & Typography Option 2 Integration */
-        body {
-            background-color: #FFF7EE; /* Parchment White background */
-            color: #303030; /* Bookish Black text for readability */
-            font-family: Calibri, sans-serif; /* Body font */
-            margin: 0;
-            padding: 0;
-        }
-        h1, h2, h3 {
-            font-family: Arial, sans-serif; /* Arial Bold for headings */
-            font-weight: bold;
-            color: #2E4057; /* Inkwell Blue */
-        }
-        .subtitle {
-            font-family: 'Comfortaa', cursive; /* Comfortaa for subtitles */
-            color: #2E4057;
-        }
-        
-        /* Header & Footer Styling */
-        header, footer {
-            background-color: #2E4057; /* Inkwell Blue background */
-            color: #FFF7EE;
-            padding: 20px;
-        }
-        header a, footer a {
-            color: #FFF7EE;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            font-family: Arial, sans-serif;
-        }
-        .header-content {
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            max-width: 1200px; 
-            margin: auto;
-        }
-        .search-bar {
-            display: inline-block;
-            margin-left: 15px;
-        }
-
-        /* Buttons */
-        .btn-primary {
-            background-color: #C7B65E; /* Aged Gold button */
-            color: #303030;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-            border-radius: 4px;
-        }
-        .btn-secondary {
-            background-color: #F7B3CC; /* Dusty Rose button */
-            color: #303030;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-            border-radius: 4px;
-        }
-
-        /* Layout & Table Structure */
-        main {
-            padding: 20px;
-            max-width: 1000px;
-            margin: auto;
-            text-align: center;
-        }
-        .intro-text {
-            margin-bottom: 30px;
-            font-size: 1.1em;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 30px;
-        }
-        td {
-            border: 2px solid #2E4057; /* Inkwell Blue borders */
-            padding: 20px;
-            vertical-align: bottom;
-            background-color: #fff;
-            width: 33%;
-        }
-        .item-description {
-            margin: 15px 0;
-            line-height: 1.4;
-        }
-
-        /* Modal Styling */
-        .modal {
-            display: none; 
-            position: fixed; 
-            top: 20%; 
-            left: 50%; 
-            transform: translate(-50%, 0); 
-            background: #FFF7EE; 
-            border: 4px solid #2E4057; 
-            padding: 30px; 
-            z-index: 10; 
-            box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
-            border-radius: 8px;
-            width: 300px;
-        }
-
-        .footer-flex {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            max-width: 1000px;
-            margin: auto;
-            text-align: center;
-            line-height: 1.8;
-        }
-    </style>
+    <title>Gallery - Book Haven Bookstore</title>
 </head>
 <body>
-
-    <!-- Header / Navigation -->
     <header>
-        <div class="header-content">
-            <div class="logo-container">
-                <a href="index.html">
-                    <img src="images/Logo.png" alt="Book Heaven Bookstore Logo" height="60" style="vertical-align: middle;">
-                </a>
-            </div>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="about.html">About Us</a>
-                <a href="staff.html">Staff Picks</a>
-                <a href="contact.html">Contact</a>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search titles...">
-                    <button type="button">Search</button>
-                </div>
-            </nav>
-        </div>
+        <img src="Logo.png" alt="Book Haven Bookstore Logo">
+        <h1>Book Haven Bookstore</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us / Contact</a></li>
+                <li><a href="staff-picks.html">Staff Picks</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <h1>Gallery & Shop</h1>
-        <p class="intro-text">Browse our collection of rare finds, new releases, and exclusive bookstore merchandise.</p>
-        
-        <!-- View Shopping Cart Button -->
-        <button class="btn-primary" onclick="document.getElementById('cartModal').style.display='block'">View Shopping Cart</button>
+        <h1>Gallery</h1>
+        [span_2](start_span)[span_3](start_span)<p>Explore our curated selection of books, magazines, and unique literary gifts designed to support your intellectual growth[span_2](end_span)[span_3](end_span).</p>
 
-        <!-- Shopping Cart Modal Window -->
-        <div id="cartModal" class="modal">
-            <h2 class="subtitle">Your Shopping Cart</h2>
-            <p>Review your selected items here.</p>
-            <button class="btn-secondary" onclick="document.getElementById('cartModal').style.display='none';">Clear Cart</button>
-            <button class="btn-primary" onclick="document.getElementById('cartModal').style.display='none'; alert('Thank you for your order.');">Process Order</button>
-        </div>
-
-        <!-- Items in Tabular Format -->
-        <table>
-            <!-- Row 1 -->
+        <table border="1">
             <tr>
                 <td>
-                    <img src="images/Client3_Book2.png" alt="Glory Riders Book" width="180">
-                    <div class="item-description">
-                        <strong>Glory Riders</strong><br>Action & Adventure Novel
-                    </div>
-                    <button class="btn-primary" onclick="alert('Item added.')">Add to Cart</button>
+                    <img src="Client3_Book1.png" alt="Brie Mine 4Ever Book">
+                    <p>Brie Mine 4Ever</p>
+                    <button>Add to Cart</button>
                 </td>
                 <td>
-                    <img src="images/Client3_Book3.png" alt="Sorcerer's Shadowed Chronicles Book" width="180">
-                    <div class="item-description">
-                        <strong>Sorcerer's Shadowed Chronicles</strong><br>Dark Fantasy
-                    </div>
-                    <button class="btn-primary" onclick="alert('Item added.')">Add to Cart</button>
+                    <img src="Client3_Book2.png" alt="Glory Riders Book">
+                    <p>Glory Riders</p>
+                    <button>Add to Cart</button>
                 </td>
                 <td>
-                    <img src="images/Client3_Magazine1.png" alt="Ball is the World Magazine" width="180">
-                    <div class="item-description">
-                        <strong>Ball is the World</strong><br>Sports Magazine
-                    </div>
-                    <button class="btn-primary" onclick="alert('Item added.')">Add to Cart</button>
+                    <img src="Client3_Book3.png" alt="Sorcerer's Shadowed Chronicles">
+                    <p>Sorcerer's Shadowed Chronicles</p>
+                    <button>Add to Cart</button>
                 </td>
             </tr>
-            <!-- Row 2 -->
             <tr>
                 <td>
-                    <img src="images/Client3_Magazine2.png" alt="Travel Magazine" width="180">
-                    <div class="item-description">
-                        <strong>Travel: Top 10 Places</strong><br>Lifestyle Magazine
-                    </div>
-                    <button class="btn-primary" onclick="alert('Item added.')">Add to Cart</button>
+                    <img src="Client3_Magazine1.png" alt="Ball Magazine">
+                    <p>Ball Magazine</p>
+                    <button>Add to Cart</button>
                 </td>
                 <td>
-                    <img src="images/Client3_Notebook.png" alt="Book Heaven Notebook" width="180">
-                    <div class="item-description">
-                        <strong>Book Heaven Notebook</strong><br>Premium Stationery
-                    </div>
-                    <button class="btn-primary" onclick="alert('Item added.')">Add to Cart</button>
+                    <img src="Client3_Magazine2.png" alt="Travel Magazine">
+                    <p>Travel Magazine</p>
+                    <button>Add to Cart</button>
                 </td>
                 <td>
-                    <img src="images/Client3_Stickers.png" alt="Bookish Stickers" width="180">
-                    <div class="item-description">
-                        <strong>Bookish Stickers Set</strong><br>Vinyl Decals
-                    </div>
-                    <button class="btn-primary" onclick="alert('Item added.')">Add to Cart</button>
+                    <img src="Client3_Magazine1.png" alt="Eat Magazine">
+                    <p>Eat Magazine</p>
+                    <button>Add to Cart</button>
                 </td>
             </tr>
-            <!-- Row 3 -->
             <tr>
                 <td>
-                    <img src="images/Client3_ToteBag.png" alt="Read Tote Bag" width="180">
-                    <div class="item-description">
-                        <strong>Read Tote Bag</strong><br>Canvas Apparel
-                    </div>
-                    <button class="btn-primary" onclick="alert('Item added.')">Add to Cart</button>
+                    <img src="Client3_Notebook.png" alt="Book Haven Notebook">
+                    <p>Book Haven Notebook</p>
+                    <button>Add to Cart</button>
                 </td>
-                <!-- Empty cells to complete the table grid cleanly -->
-                <td></td>
-                <td></td>
+                <td>
+                    <img src="Client3_Stickers.png" alt="Bookstore Stickers">
+                    <p>Book Haven Stickers</p>
+                    <button>Add to Cart</button>
+                </td>
+                <td>
+                    <img src="Client3_ToteBag.png" alt="Read Canvas Tote Bag">
+                    <p>Canvas Tote Bag</p>
+                    <button>Add to Cart</button>
+                </td>
             </tr>
         </table>
+
+        <br>
+        <button>View More (optional)</button>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <div class="footer-flex">
-            <div>
-                <strong class="subtitle" style="color:#C7B65E;">Hours</strong><br>
-                Mon-Sat: 9am-8pm<br>
-                Sun: 10am-6pm
-            </div>
-            <div>
-                <strong class="subtitle" style="color:#C7B65E;">Contact Info</strong><br>
-                (555) 123-4567<br>
-                123 Novel Way
-            </div>
-            <div>
-                <strong class="subtitle" style="color:#C7B65E;">Social Links</strong><br>
-                <a href="#">Facebook</a><br>
-                <a href="#">Instagram</a>
-            </div>
-            <div>
-                <strong class="subtitle" style="color:#C7B65E;">Policies</strong><br>
-                <a href="#">Privacy Policy</a><br>
-                <a href="#">Terms & Conditions</a>
-            </div>
-        </div>
+        <p>
+            <strong>Hours:</strong> Mon-Fri: 9 a.m. to 8 p.m. | Sat: 10 a.m. to 6 p.m. | [span_4](start_span)Sun: 11 a.m. to 5 p.m.[span_4](end_span)
+        </p>
+        <p>Contact Info | Social Links | Policies</p>
     </footer>
-
 </body>
 </html>
-```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery - Book Haven Bookstore</title>
+</head>
+<body>
+    <header>
+        <img src="Logo.png" alt="Book Haven Bookstore Logo">
+        <h1>Book Haven Bookstore</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us / Contact</a></li>
+                <li><a href="staff-picks.html">Staff Picks</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Gallery</h1>
+        [span_2](start_span)[span_3](start_span)<p>Explore our curated selection of books, magazines, and unique literary gifts designed to support your intellectual growth[span_2](end_span)[span_3](end_span).</p>
+
+        <table border="1">
+            <tr>
+                <td>
+                    <img src="Client3_Book1.png" alt="Brie Mine 4Ever Book">
+                    <p>Brie Mine 4Ever</p>
+                    <button>Add to Cart</button>
+                </td>
+                <td>
+                    <img src="Client3_Book2.png" alt="Glory Riders Book">
+                    <p>Glory Riders</p>
+                    <button>Add to Cart</button>
+                </td>
+                <td>
+                    <img src="Client3_Book3.png" alt="Sorcerer's Shadowed Chronicles">
+                    <p>Sorcerer's Shadowed Chronicles</p>
+                    <button>Add to Cart</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="Client3_Magazine1.png" alt="Ball Magazine">
+                    <p>Ball Magazine</p>
+                    <button>Add to Cart</button>
+                </td>
+                <td>
+                    <img src="Client3_Magazine2.png" alt="Travel Magazine">
+                    <p>Travel Magazine</p>
+                    <button>Add to Cart</button>
+                </td>
+                <td>
+                    <img src="Client3_Magazine1.png" alt="Eat Magazine">
+                    <p>Eat Magazine</p>
+                    <button>Add to Cart</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="Client3_Notebook.png" alt="Book Haven Notebook">
+                    <p>Book Haven Notebook</p>
+                    <button>Add to Cart</button>
+                </td>
+                <td>
+                    <img src="Client3_Stickers.png" alt="Bookstore Stickers">
+                    <p>Book Haven Stickers</p>
+                    <button>Add to Cart</button>
+                </td>
+                <td>
+                    <img src="Client3_ToteBag.png" alt="Read Canvas Tote Bag">
+                    <p>Canvas Tote Bag</p>
+                    <button>Add to Cart</button>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <button>View More (optional)</button>
+    </main>
+
+    <footer>
+        <p>
+            <strong>Hours:</strong> Mon-Fri: 9 a.m. to 8 p.m. | Sat: 10 a.m. to 6 p.m. | [span_4](start_span)Sun: 11 a.m. to 5 p.m.[span_4](end_span)
+        </p>
+        <p>Contact Info | Social Links | Policies</p>
+    </footer>
+</body>
+</html>
