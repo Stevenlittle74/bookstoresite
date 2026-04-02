@@ -1,150 +1,152 @@
-/* Root variables for Color Palette 1 */
-:root {
-    --inkwell-blue: #2E4057;
-    --intensity-indigo: #EE583F;
-    --dusty-rose: #F7B3CC;
-    --aged-gold: #C7B65E;
-    --parchment-white: #FFF7EE;
-    --bookish-black: #131C26;
-  }
+/* =========================================
+   1. GLOBAL VARIABLES (Color Palette 1) 
   
-  body {
-    background-color: var(--parchment-white); [span_3](start_span)/*[span_3](end_span) */
-    color: var(--bookish-black); [span_4](start_span)/*[span_4](end_span) */
-    font-family: 'Calibri', sans-serif; [span_5](start_span)/*[span_5](end_span) */
+   ========================================= */
+   :root {
+    --inkwell-blue: #2E4057;     /* Header/Footer/Buttons */
+    --intensity-indigo: #EE583F; /* Accents */
+    --dusty-rose: #F7B3CC;       /* Soft Accents */
+    --aged-gold: #C7B65E;        /* Borders/Dividers */
+    --parchment-white: #FFF7EE;  /* Main Background */
+    --bookish-black: #131C26;    [span_0](start_span)/* Primary Text[span_0](end_span) */
+}
+
+/* =========================================
+   2. BASE STYLES (Typography Option 2) 
+  
+   ========================================= */
+body {
+    background-color: var(--parchment-white);
+    color: var(--bookish-black);
+    font-family: 'Calibri', sans-serif; [span_1](start_span)/* Body Text[span_1](end_span) */
     margin: 0;
     padding: 0;
-  }
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif; [span_2](start_span)/* Headings[span_2](end_span) */
+    color: var(--inkwell-blue);
+    text-align: center;
+}
+
+/* =========================================
+   3. SHARED COMPONENTS (Header, Nav, Footer) 
   
-  header {
-    background-color: var(--inkwell-blue); [span_6](start_span)/*[span_6](end_span) */
+   ========================================= */
+header {
+    background-color: var(--inkwell-blue);
     color: white;
     padding: 20px;
     text-align: center;
-  }
-  
-  header h1 {
-    font-family: 'Arial', sans-serif; [span_7](start_span)/*[span_7](end_span) */
+}
+
+header h1 {
+    color: white;
     margin: 10px 0;
-  }
-  
-  nav a {
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
-  }
-  
-  .hero {
-    padding: 40px;
+}
+
+nav a:hover {
+    color: var(--dusty-rose);
+}
+
+footer {
+    background-color: var(--inkwell-blue);
+    color: white;
+    padding: 30px;
     text-align: center;
-    background-color: var(--dusty-rose); [span_8](start_span)/*[span_8](end_span) */
-  }
+    margin-top: 40px;
+}
+
+/* =========================================
+   4. HOMEPAGE & GRID LAYOUTS 
   
-  .section-title {
-    font-family: 'Comfortaa', cursive; [span_9](start_span)/*[span_9](end_span) */
-    color: var(--inkwell-blue);
-    text-align: center;
-  }
-  
-  .container {
+   ========================================= */
+.container {
     display: flex;
     justify-content: space-around;
-    padding: 20px;
     flex-wrap: wrap;
-  }
-  
-  .card {
+    padding: 20px;
+}
+
+.card, .gallery-item {
     background: white;
-    border: 1px solid var(--aged-gold); [span_10](start_span)/*[span_10](end_span) */
+    border: 2px solid var(--aged-gold);
     border-radius: 8px;
-    width: 30%;
-    margin: 10px;
-    padding: 15px;
-    text-align: center;
-  }
-  
-  footer {
-    background-color: var(--inkwell-blue);
-    color: white;
+    width: 250px;
+    margin: 15px;
     padding: 20px;
     text-align: center;
-    margin-top: 20px;
-  }
-  
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
 
-  /* Gallery Grid Layout */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 40px;
-  }
-  
-  .gallery-item {
-    background: white;
-    border: 1px solid var(--aged-gold); [span_4](start_span)/* Aged Gold from Palette 1[span_4](end_span) */
-    padding: 15px;
-    text-align: center;
-    border-radius: 5px;
-  }
-  
-  .gallery-item img {
+.card img, .gallery-item img {
     max-width: 100%;
     height: auto;
-    border-bottom: 1px solid var(--parchment-white);
-    margin-bottom: 10px;
-  }
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   5. GALLERY & BUTTONS 
   
-  /* Requirement: Add to Cart Button */
-  .add-to-cart {
-    background-color: var(--intensity-indigo); /* Using the bold red/orange from Palette 1 */
+   ========================================= */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.add-to-cart {
+    background-color: var(--intensity-indigo);
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     cursor: pointer;
-    font-family: 'Arial', sans-serif;
     font-weight: bold;
-  }
-  
-  .add-to-cart:hover {
+    border-radius: 4px;
+}
+
+.add-to-cart:hover {
     background-color: var(--inkwell-blue);
-  }
-  
-  .view-cart-btn {
-    display: block;
-    margin: 20px auto;
+}
+
+.view-cart-btn {
+    display: inline-block;
     background-color: var(--inkwell-blue);
     color: white;
-    padding: 10px 20px;
+    padding: 10px 25px;
     text-decoration: none;
-    width: fit-content;
-  }
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* =========================================
+   6. ABOUT US & FORMS 
   
-
-
-  /* About Us Specific Styles */
-.about-content {
+   ========================================= */
+.about-section {
     max-width: 800px;
     margin: 0 auto;
-    padding: 40px 20px;
-    line-height: 1.6;
-}
-
-.hours-box {
-    background-color: var(--aged-gold); /* Aged Gold from Palette 1 */
-    color: var(--bookish-black);
     padding: 20px;
-    border-radius: 8px;
-    margin: 20px 0;
 }
 
-/* Form Styling */
 .feedback-form {
-    background-color: white;
-    padding: 30px;
-    border: 2px solid var(--inkwell-blue);
+    background: white;
+    padding: 25px;
+    border: 1px solid var(--inkwell-blue);
     border-radius: 8px;
+    margin-top: 30px;
 }
 
 .form-group {
@@ -153,30 +155,37 @@
 
 .form-group label {
     display: block;
-    font-weight: bold;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
-.form-group input, 
-.form-group textarea, 
-.form-group select {
+.form-group input, .form-group textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-family: 'Calibri', sans-serif;
 }
 
-.submit-btn {
-    background-color: var(--inkwell-blue);
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+/* =========================================
+   7. STAFF PICKS (Custom Page) 
+  
+   ========================================= */
+.staff-card {
+    display: flex;
+    background: white;
+    border-left: 8px solid var(--aged-gold);
+    margin: 20px auto;
+    max-width: 700px;
+    padding: 20px;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.submit-btn:hover {
-    background-color: var(--intensity-indigo);
+.staff-card img {
+    width: 120px;
+    margin-right: 20px;
+}
+
+.staff-info {
+    text-align: left;
 }
