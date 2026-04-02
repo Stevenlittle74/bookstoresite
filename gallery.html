@@ -2,76 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Book Haven – Gallery</title>
+    <title>Book Haven | Gallery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <img src="images/Logo.png" alt="Book Haven Logo" width="120">
-    <h1>Gallery</h1>
+    <header>
+        <img src="Logo.png" alt="Book Haven Logo" width="80">
+        <h1>Our Collection</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Us</a>
+            <a href="staff.html">Staff Picks</a>
+        </nav>
+    </header>
 
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="gallery.html">Gallery</a> |
-        <a href="about.html">About / Contact</a> |
-        <a href="staffpicks.html">Staff Picks</a>
-    </nav>
-</header>
+    <a href="#" class="view-cart-btn">View Shopping Cart</a>
 
-<main>
-    <h2>Our Products</h2>
+    <main class="gallery-grid">
+        <div class="gallery-item">
+            <img src="Client3_Book1.png" alt="Classic Novel">
+            <h3>Classic Novel</h3>
+            <p>$15.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
 
-    <table border="1" cellpadding="10">
-        <tr>
-            <td>
-                <img src="images/Client3_Book1.png" width="150" alt="Book 1"><br>
-                <button>Add to Cart</button>
-            </td>
-            <td>
-                <img src="images/Client3_Book2.png" width="150" alt="Book 2"><br>
-                <button>Add to Cart</button>
-            </td>
-            <td>
-                <img src="images/Client3_Book3.png" width="150" alt="Book 3"><br>
-                <button>Add to Cart</button>
-            </td>
-        </tr>
+        <div class="gallery-item">
+            <img src="Client3_Magazine1.png" alt="Literary Journal">
+            <h3>Literary Journal</h3>
+            <p>$9.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
 
-        <tr>
-            <td>
-                <img src="images/Client3_Magazine1.png" width="150" alt="Magazine 1"><br>
-                <button>Add to Cart</button>
-            </td>
-            <td>
-                <img src="images/Client3_Magazine2.png" width="150" alt="Magazine 2"><br>
-                <button>Add to Cart</button>
-            </td>
-            <td>
-                <img src="images/Client3_Notebook.png" width="150" alt="Notebook"><br>
-                <button>Add to Cart</button>
-            </td>
-        </tr>
+        <div class="gallery-item">
+            <img src="Client3_Notebook.png" alt="Writer's Notebook">
+            <h3>Writer's Notebook</h3>
+            <p>$12.50</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
 
-        <tr>
-            <td>
-                <img src="images/Client3_Stickers.png" width="150" alt="Stickers"><br>
-                <button>Add to Cart</button>
-            </td>
-            <td>
-                <img src="images/Client3_ToteBag.png" width="150" alt="Tote Bag"><br>
-                <button>Add to Cart</button>
-            </td>
-            <td>
-                <!-- Empty cell for layout symmetry -->
-            </td>
-        </tr>
-    </table>
+        <div class="gallery-item">
+            <img src="Client3_ToteBag.png" alt="Bookish Tote">
+            <h3>Bookish Tote</h3>
+            <p>$18.00</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </main>
 
-</main>
-
-<footer>
-    <p>&copy; 2026 Book Haven Bookstore</p>
-</footer>
+    <footer>
+        <p>&copy; 2026 Book Haven Bookstore | <a href="#">Social Media</a></p>
+    </footer>
 
 </body>
 </html>
