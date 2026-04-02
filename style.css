@@ -1,24 +1,391 @@
-[span_8](start_span)/* Updated Header for Logo Visibility[span_8](end_span) */
-header {
-    background-color: var(--parchment-white); [span_9](start_span)/* High contrast for the blue logo[span_9](end_span) */
-    color: var(--inkwell-blue);               [span_10](start_span)/* Dark text on light background[span_10](end_span) */
-    padding: 20px;
-    text-align: center;
-    border-bottom: 3px solid var(--aged-gold); [span_11](start_span)/* Adds a professional 'book-edge' divider[span_11](end_span) */
-}
+/* --- style.css --- */
 
-header h1 {
-    color: var(--inkwell-blue); [span_12](start_span)/* Matches your 'Ink on Paper' theme[span_12](end_span) */
-    margin: 10px 0;
-}
+/* 1. Base Styling & Typography (per requirements) */
+:root {
+  /* Color Palette 2 */
+    --color-dark-blue: #2E2E4E;
+      --color-purple: #5C2E5C;
+        --color-literature-blue: #3F5461;
+          --color-book-worm: #3E5641;
+            --color-romantic-red: #742C36;
 
-nav a {
-    color: var(--inkwell-blue); [span_13](start_span)/* Ensures links are visible[span_13](end_span) */
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
+              /* Additional specified colors */
+                --font-color-vintage: #C1CFD6; /* Font color */
+                  --background-color: #fdfaf5; /* A light, creamy color like paper */
+                  }
 
-nav a:hover {
-    color: var(--intensity-indigo); /* Visual feedback using your accent color */
-}
+                  * {
+                    box-sizing: border-box;
+                      margin: 0;
+                        padding: 0;
+                        }
+
+                        body {
+                          font-family: Arial, sans-serif; /* Fallback */
+                            color: var(--color-literature-blue); /* Base font color */
+                              background-color: var(--background-color);
+                                line-height: 1.6;
+                                }
+
+                                /* Typography (Specific definitions from prompt) */
+                                h1.display-title {
+                                  font-family: 'Courier New', Courier, monospace;
+                                    font-weight: bold;
+                                      font-size: 40px;
+                                        color: var(--font-color-vintage); /* Specifically requested for header titles */
+                                        }
+
+                                        h2.title-large {
+                                          font-family: Georgia, serif;
+                                            font-weight: bold;
+                                              font-size: 30px;
+                                              }
+
+                                              h3.title {
+                                                font-family: Arial, Helvetica, sans-serif;
+                                                  font-weight: bold;
+                                                    font-size: 25px;
+                                                    }
+
+                                                    h4.subtitle {
+                                                      font-family: Arial, Helvetica, sans-serif;
+                                                        font-weight: bold;
+                                                          font-size: 15px;
+                                                          }
+
+                                                          .body-large {
+                                                            font-family: 'Comic Sans MS', cursive, sans-serif;
+                                                              font-weight: normal;
+                                                                font-size: 20px;
+                                                                }
+
+                                                                p,
+                                                                .body-strong {
+                                                                  font-family: Arial, Helvetica, sans-serif;
+                                                                    font-weight: bold;
+                                                                      font-size: 16px;
+                                                                      }
+
+                                                                      .body {
+                                                                        font-family: Arial, Helvetica, sans-serif;
+                                                                          font-weight: normal;
+                                                                            font-size: 16px;
+                                                                            }
+
+                                                                            figcaption,
+                                                                            .caption {
+                                                                              font-family: Calibri, 'Gill Sans', sans-serif;
+                                                                                font-weight: normal;
+                                                                                  font-size: 11px;
+                                                                                  }
+
+                                                                                  /* 2. Header & Footer (Shared Styles) */
+                                                                                  header {
+                                                                                    background-color: var(--color-dark-blue);
+                                                                                      color: var(--font-color-vintage);
+                                                                                        padding: 1rem 2rem;
+                                                                                          display: flex;
+                                                                                            justify-content: space-between;
+                                                                                              align-items: center;
+                                                                                              }
+
+                                                                                              header img.logo {
+                                                                                                height: 60px; /* Logo size in header */
+                                                                                                  width: auto;
+                                                                                                  }
+
+                                                                                                  nav ul {
+                                                                                                    list-style-type: none;
+                                                                                                      display: flex;
+                                                                                                        gap: 1.5rem;
+                                                                                                        }
+
+                                                                                                        nav ul li a {
+                                                                                                          text-decoration: none;
+                                                                                                            color: var(--font-color-vintage);
+                                                                                                              font-weight: bold;
+                                                                                                                transition: color 0.3s ease;
+                                                                                                                }
+
+                                                                                                                nav ul li a:hover {
+                                                                                                                  color: #fff; /* White on hover for visibility */
+                                                                                                                  }
+
+                                                                                                                  footer {
+                                                                                                                    background-color: var(--color-literature-blue);
+                                                                                                                      color: white;
+                                                                                                                        padding: 2rem;
+                                                                                                                          margin-top: auto; /* Push to the bottom */
+                                                                                                                            display: flex;
+                                                                                                                              justify-content: space-between;
+                                                                                                                                align-items: flex-start;
+                                                                                                                                  flex-wrap: wrap;
+                                                                                                                                  }
+
+                                                                                                                                  footer .newsletter,
+                                                                                                                                  footer .social-links,
+                                                                                                                                  footer .footer-nav {
+                                                                                                                                    flex: 1 1 300px; /* Responsive columns */
+                                                                                                                                      margin-bottom: 1rem;
+                                                                                                                                      }
+
+                                                                                                                                      footer .footer-nav ul {
+                                                                                                                                        list-style-type: none;
+                                                                                                                                        }
+
+                                                                                                                                        footer .footer-nav ul li a {
+                                                                                                                                          text-decoration: none;
+                                                                                                                                            color: white;
+                                                                                                                                            }
+
+                                                                                                                                            footer .newsletter input[type="email"] {
+                                                                                                                                              padding: 0.5rem;
+                                                                                                                                                border: none;
+                                                                                                                                                  border-radius: 4px;
+                                                                                                                                                  }
+
+                                                                                                                                                  footer .newsletter button {
+                                                                                                                                                    padding: 0.5rem 1rem;
+                                                                                                                                                      background-color: var(--color-romantic-red);
+                                                                                                                                                        color: white;
+                                                                                                                                                          border: none;
+                                                                                                                                                            border-radius: 4px;
+                                                                                                                                                              cursor: pointer;
+                                                                                                                                                              }
+
+                                                                                                                                                              /* 3. Homepage Styling (index.html) */
+                                                                                                                                                              main {
+                                                                                                                                                                padding: 2rem;
+                                                                                                                                                                  max-width: 1200px;
+                                                                                                                                                                    margin: 0 auto;
+                                                                                                                                                                    }
+
+                                                                                                                                                                    section {
+                                                                                                                                                                      margin-bottom: 3rem;
+                                                                                                                                                                      }
+
+                                                                                                                                                                      .product-gallery {
+                                                                                                                                                                        display: flex;
+                                                                                                                                                                          gap: 1.5rem;
+                                                                                                                                                                            flex-wrap: wrap;
+                                                                                                                                                                              justify-content: center;
+                                                                                                                                                                              }
+
+                                                                                                                                                                              .product-item {
+                                                                                                                                                                                flex: 0 0 250px;
+                                                                                                                                                                                  border: 1px solid #ddd;
+                                                                                                                                                                                    background-color: white;
+                                                                                                                                                                                      border-radius: 8px;
+                                                                                                                                                                                        padding: 1rem;
+                                                                                                                                                                                          text-align: center;
+                                                                                                                                                                                          }
+
+                                                                                                                                                                                          .product-item img {
+                                                                                                                                                                                            max-width: 100%;
+                                                                                                                                                                                              height: auto;
+                                                                                                                                                                                                border-bottom: 1px solid #eee;
+                                                                                                                                                                                                  margin-bottom: 0.5rem;
+                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                  .categories ul {
+                                                                                                                                                                                                    display: flex;
+                                                                                                                                                                                                      list-style: none;
+                                                                                                                                                                                                        gap: 1rem;
+                                                                                                                                                                                                          flex-wrap: wrap;
+                                                                                                                                                                                                          }
+
+                                                                                                                                                                                                          .categories li a {
+                                                                                                                                                                                                            padding: 1rem 1.5rem;
+                                                                                                                                                                                                              background-color: var(--color-book-worm);
+                                                                                                                                                                                                                color: white;
+                                                                                                                                                                                                                  border-radius: 20px;
+                                                                                                                                                                                                                    text-decoration: none;
+                                                                                                                                                                                                                      transition: background 0.3s;
+                                                                                                                                                                                                                      }
+
+                                                                                                                                                                                                                      .categories li a:hover {
+                                                                                                                                                                                                                        background-color: var(--color-purple);
+                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                        /* 4. Gallery Page Styling (gallery.html) */
+                                                                                                                                                                                                                        .gallery-table {
+                                                                                                                                                                                                                          width: 100%;
+                                                                                                                                                                                                                            border-collapse: collapse;
+                                                                                                                                                                                                                              margin-top: 1rem;
+                                                                                                                                                                                                                              }
+
+                                                                                                                                                                                                                              .gallery-table th,
+                                                                                                                                                                                                                              .gallery-table td {
+                                                                                                                                                                                                                                border: 1px solid #ddd;
+                                                                                                                                                                                                                                  padding: 1rem;
+                                                                                                                                                                                                                                    text-align: left;
+                                                                                                                                                                                                                                    }
+
+                                                                                                                                                                                                                                    .gallery-table th {
+                                                                                                                                                                                                                                      background-color: var(--color-book-worm);
+                                                                                                                                                                                                                                        color: white;
+                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                        .gallery-table img {
+                                                                                                                                                                                                                                          max-width: 100px;
+                                                                                                                                                                                                                                            height: auto;
+                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                            .add-to-cart {
+                                                                                                                                                                                                                                              background-color: var(--color-literature-blue);
+                                                                                                                                                                                                                                                color: white;
+                                                                                                                                                                                                                                                  padding: 0.5rem 1rem;
+                                                                                                                                                                                                                                                    border: none;
+                                                                                                                                                                                                                                                      border-radius: 4px;
+                                                                                                                                                                                                                                                        cursor: pointer;
+                                                                                                                                                                                                                                                          transition: background 0.3s;
+                                                                                                                                                                                                                                                          }
+
+                                                                                                                                                                                                                                                          .add-to-cart:hover {
+                                                                                                                                                                                                                                                            background-color: var(--color-romantic-red);
+                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                            /* 5. View Cart and Modal Styling (Shared for all pages) */
+                                                                                                                                                                                                                                                            #view-cart-btn {
+                                                                                                                                                                                                                                                              background-color: var(--color-purple);
+                                                                                                                                                                                                                                                                color: white;
+                                                                                                                                                                                                                                                                  padding: 0.5rem 1rem;
+                                                                                                                                                                                                                                                                    border: none;
+                                                                                                                                                                                                                                                                      border-radius: 4px;
+                                                                                                                                                                                                                                                                        cursor: pointer;
+                                                                                                                                                                                                                                                                          font-weight: bold;
+                                                                                                                                                                                                                                                                          }
+
+                                                                                                                                                                                                                                                                          /* Modal Styling */
+                                                                                                                                                                                                                                                                          .modal {
+                                                                                                                                                                                                                                                                            display: none; /* Hidden by default */
+                                                                                                                                                                                                                                                                              position: fixed;
+                                                                                                                                                                                                                                                                                z-index: 1000;
+                                                                                                                                                                                                                                                                                  left: 0;
+                                                                                                                                                                                                                                                                                    top: 0;
+                                                                                                                                                                                                                                                                                      width: 100%;
+                                                                                                                                                                                                                                                                                        height: 100%;
+                                                                                                                                                                                                                                                                                          overflow: auto;
+                                                                                                                                                                                                                                                                                            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                            .modal-content {
+                                                                                                                                                                                                                                                                                              background-color: white;
+                                                                                                                                                                                                                                                                                                margin: 15% auto;
+                                                                                                                                                                                                                                                                                                  padding: 2rem;
+                                                                                                                                                                                                                                                                                                    border: 1px solid #888;
+                                                                                                                                                                                                                                                                                                      width: 80%;
+                                                                                                                                                                                                                                                                                                        max-width: 500px;
+                                                                                                                                                                                                                                                                                                          border-radius: 8px;
+                                                                                                                                                                                                                                                                                                            position: relative;
+                                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                                            .close-modal {
+                                                                                                                                                                                                                                                                                                              color: #aaa;
+                                                                                                                                                                                                                                                                                                                float: right;
+                                                                                                                                                                                                                                                                                                                  font-size: 28px;
+                                                                                                                                                                                                                                                                                                                    font-weight: bold;
+                                                                                                                                                                                                                                                                                                                      cursor: pointer;
+                                                                                                                                                                                                                                                                                                                      }
+
+                                                                                                                                                                                                                                                                                                                      .close-modal:hover {
+                                                                                                                                                                                                                                                                                                                        color: black;
+                                                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                                                        .modal-actions {
+                                                                                                                                                                                                                                                                                                                          display: flex;
+                                                                                                                                                                                                                                                                                                                            justify-content: flex-end;
+                                                                                                                                                                                                                                                                                                                              gap: 1rem;
+                                                                                                                                                                                                                                                                                                                                margin-top: 1rem;
+                                                                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                                                                .modal-actions button {
+                                                                                                                                                                                                                                                                                                                                  padding: 0.5rem 1rem;
+                                                                                                                                                                                                                                                                                                                                    border: none;
+                                                                                                                                                                                                                                                                                                                                      border-radius: 4px;
+                                                                                                                                                                                                                                                                                                                                        cursor: pointer;
+                                                                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                                                                        .clear-cart {
+                                                                                                                                                                                                                                                                                                                                          background-color: #ddd;
+                                                                                                                                                                                                                                                                                                                                          }
+
+                                                                                                                                                                                                                                                                                                                                          .process-order {
+                                                                                                                                                                                                                                                                                                                                            background-color: var(--color-romantic-red);
+                                                                                                                                                                                                                                                                                                                                              color: white;
+                                                                                                                                                                                                                                                                                                                                              }
+
+                                                                                                                                                                                                                                                                                                                                              /* 6. About Us Page Styling (about-us.html) */
+                                                                                                                                                                                                                                                                                                                                              .hours {
+                                                                                                                                                                                                                                                                                                                                                background-color: white;
+                                                                                                                                                                                                                                                                                                                                                  padding: 1.5rem;
+                                                                                                                                                                                                                                                                                                                                                    border-radius: 8px;
+                                                                                                                                                                                                                                                                                                                                                      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                                                                                                                                                                                                                                                                                                                                                      }
+
+                                                                                                                                                                                                                                                                                                                                                      .hours ul {
+                                                                                                                                                                                                                                                                                                                                                        list-style: none;
+                                                                                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                                                                                        .feedback-form form {
+                                                                                                                                                                                                                                                                                                                                                          display: grid;
+                                                                                                                                                                                                                                                                                                                                                            grid-template-columns: 1fr 1fr;
+                                                                                                                                                                                                                                                                                                                                                              gap: 1rem;
+                                                                                                                                                                                                                                                                                                                                                              }
+
+                                                                                                                                                                                                                                                                                                                                                              .feedback-form form label {
+                                                                                                                                                                                                                                                                                                                                                                grid-column: span 2;
+                                                                                                                                                                                                                                                                                                                                                                  font-weight: bold;
+                                                                                                                                                                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                                                                                                                                                                  .feedback-form input[type="text"],
+                                                                                                                                                                                                                                                                                                                                                                  .feedback-form input[type="email"],
+                                                                                                                                                                                                                                                                                                                                                                  .feedback-form textarea {
+                                                                                                                                                                                                                                                                                                                                                                    grid-column: span 2;
+                                                                                                                                                                                                                                                                                                                                                                      padding: 0.8rem;
+                                                                                                                                                                                                                                                                                                                                                                        border: 1px solid #ccc;
+                                                                                                                                                                                                                                                                                                                                                                          border-radius: 4px;
+                                                                                                                                                                                                                                                                                                                                                                          }
+
+                                                                                                                                                                                                                                                                                                                                                                          .feedback-form input[type="radio"] {
+                                                                                                                                                                                                                                                                                                                                                                            grid-column: initial;
+                                                                                                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                                                                                                            .feedback-form .submit-btn {
+                                                                                                                                                                                                                                                                                                                                                                              grid-column: span 2;
+                                                                                                                                                                                                                                                                                                                                                                                background-color: var(--color-purple);
+                                                                                                                                                                                                                                                                                                                                                                                  color: white;
+                                                                                                                                                                                                                                                                                                                                                                                    padding: 1rem;
+                                                                                                                                                                                                                                                                                                                                                                                      border: none;
+                                                                                                                                                                                                                                                                                                                                                                                        border-radius: 4px;
+                                                                                                                                                                                                                                                                                                                                                                                          cursor: pointer;
+                                                                                                                                                                                                                                                                                                                                                                                            font-weight: bold;
+                                                                                                                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                                                                                                                            /* 7. Staff Picks Page Styling (staff-picks.html) */
+                                                                                                                                                                                                                                                                                                                                                                                            .testimonials blockquote {
+                                                                                                                                                                                                                                                                                                                                                                                              font-family: Georgia, serif;
+                                                                                                                                                                                                                                                                                                                                                                                                font-size: 1.2rem;
+                                                                                                                                                                                                                                                                                                                                                                                                  font-style: italic;
+                                                                                                                                                                                                                                                                                                                                                                                                    margin: 2rem 0;
+                                                                                                                                                                                                                                                                                                                                                                                                      position: relative;
+                                                                                                                                                                                                                                                                                                                                                                                                        padding-left: 2rem;
+                                                                                                                                                                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                                                                                                                                                                        .testimonials blockquote::before {
+                                                                                                                                                                                                                                                                                                                                                                                                          content: "“";
+                                                                                                                                                                                                                                                                                                                                                                                                            font-size: 4rem;
+                                                                                                                                                                                                                                                                                                                                                                                                              color: var(--color-romantic-red);
+                                                                                                                                                                                                                                                                                                                                                                                                                position: absolute;
+                                                                                                                                                                                                                                                                                                                                                                                                                  left: 0;
+                                                                                                                                                                                                                                                                                                                                                                                                                    top: -1rem;
+                                                                                                                                                                                                                                                                                                                                                                                                                    }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                    .community .event,
+                                                                                                                                                                                                                                                                                                                                                                                                                    .collaborations .collaboration {
+                                                                                                                                                                                                                                                                                                                                                                                                                      background-color: white;
+                                                                                                                                                                                                                                                                                                                                                                                                                        padding: 1.5rem;
+                                                                                                                                                                                                                                                                                                                                                                                                                          margin-bottom: 1rem;
+                                                                                                                                                                                                                                                                                                                                                                                                                            border-radius: 8px;
+                                                                                                                                                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                                                                                                                                            

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Book Haven</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo-title">
+      <img src="images/Logo.png" alt="Book Haven Logo" class="logo">
+      <h1 class="display-title">About Book Haven</h1>
+    </div>
+    <button id="view-cart-btn">View Cart</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="staff-picks.html">Staff Picks</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="description">
+      <h2 class="title-large">Our Story and Mission</h2>
+      <p class="body">Located in the heart of Brookhaven, Book Haven is more than just a bookstore; it’s a local treasurer and community hub for book enthusiasts. We offer a diverse selection of books, magazines, journals, and high-quality office supplies. </p>
+      <p class="body">We carry a deep-rooted commitment to fostering literacy, exploration, and a profound love for reading among a broad audience of book lovers and knowledge seekers. Our mission is to amplify visibility, cultivate a vibrant literary community, and simplify the process of book inquiries and purchases. </p>
+    </section>
+
+    <section class="hours">
+      <h3 class="title">Business Hours</h3>
+      <ul class="body">
+        <li>Monday - Friday: 9:00 a.m. - 8:00 p.m.</li>
+        <li>Saturday: 10:00 a.m. - 6:00 p.m.</li>
+        <li>Sunday: 11:00 a.m. - 5:00 p.m.</li>
+      </ul>
+    </section>
+
+    <section class="feedback-form">
+      <h3 class="title">Feedback and Orders Form</h3>
+      <p class="body">We want to hear from you! Please fill out the form below for feedback or product inquiries. This form will submit your request.</p>
+      
+      <form action="/submit-form.html" method="post">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label>Reason for Contact:</label>
+        <input type="radio" id="type_feedback" name="feedback_type" value="Feedback" required>
+        <label for="type_feedback" class="caption">General Feedback</label><br>
+        <input type="radio" id="type_order" name="feedback_type" value="Order Inquery">
+        <label for="type_order" class="caption">Order Inquiry / Order Request</label><br>
+
+        <label for="comments">Comments / Items to Order</label>
+        <textarea id="comments" name="comments" rows="6" required placeholder="For orders, please specify the item name and quantity..."></textarea>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="newsletter">
+      <h4 class="subtitle">Subscribe to Our Newsletter</h4>
+      <input type="email" placeholder="Your Email Address">
+      <button>Subscribe</button>
+    </div>
+    <div class="social-links">
+      <h4 class="subtitle">Connect With Us</h4>
+      <a href="#" class="body">Facebook</a> |
+      <a href="#" class="body">Instagram</a> |
+      <a href="#" class="body">Twitter</a>
+    </div>
+    <div class="footer-nav">
+      <h4 class="subtitle">Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="staff-picks.html">Staff Picks</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3>Your Shopping Cart</h3>
+      <div id="cart-items-list" class="body">Your cart is empty.</div>
+      <div class="modal-actions">
+        <button id="clear-cart-btn" class="clear-cart">Clear Cart</button>
+        <button id="process-order-btn" class="process-order">Process Order</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // --- Shared Cart Logic (COPY OF JS FROM INDEX.HTML) ---
+    let cart = [];
+    const viewCartBtn = document.getElementById('view-cart-btn');
+    const modal = document.getElementById('cart-modal');
+    const closeModal = document.querySelector('.close-modal');
+    const cartList = document.getElementById('cart-items-list');
+    const clearCartBtn = document.getElementById('clear-cart-btn');
+    const processOrderBtn = document.getElementById('process-order-btn');
+
+    function updateCartDisplay() {
+      if (cart.length === 0) {
+        cartList.innerText = 'Your cart is empty.';
+      } else {
+        cartList.innerText = cart.join(', ');
+      }
+    }
+
+    function addToCart(itemName) {
+      cart.push(itemName);
+      alert('Item added'); 
+      updateCartDisplay();
+    }
+
+    viewCartBtn.onclick = function() { modal.style.display = "block"; }
+    closeModal.onclick = function() { modal.style.display = "none"; }
+    window.onclick = function(event) { if (event.target == modal) { modal.style.display = "none"; } }
+    clearCartBtn.onclick = function() { cart = []; updateCartDisplay(); alert('Your cart has been cleared.'); }
+    processOrderBtn.onclick = function() {
+      if (cart.length > 0) {
+        alert('Thank you for your order!'); 
+        cart = []; updateCartDisplay(); modal.style.display = "none";
+      } else { alert('Your cart is empty. Add items before ordering!'); }
+    }
+  </script>
+</body>
+</html>
