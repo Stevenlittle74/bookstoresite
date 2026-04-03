@@ -5,10 +5,11 @@
     <title>Gallery - Book Haven</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* CSS for the View Cart Modal */
-        .modal { display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); }
-        .modal-content { background-color: white; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 50%; border-radius: 8px; }
-        .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+        /* CSS for the required View Cart Modal */
+        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); }
+        .modal-content { background-color: white; margin: 10% auto; padding: 30px; width: 60%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .close { color: #742C36; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+        #cartList { list-style: square; padding-left: 20px; margin: 20px 0; }
     </style>
 </head>
 <body>
@@ -20,31 +21,81 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="about-us.html">About Us</a></li>
+                <li><a href="staff-picks.html">Staff Picks</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h2 class="title-large">Our Collection</h2>
+        <h2 class="title-large">Our Full Collection</h2>
         <table class="gallery-table">
-            <tr>
-                <th>Item</th>
-                <th>Description</th>
-                <th>Action</th>
-            </tr>
-            <tr>
-                <td><img src="images/Client3_Book1.png" alt="Book 1" width="50"></td>
-                <td class="body">The Quiet Reader</td>
-                <td><button type="button" onclick="addToCart('The Quiet Reader')">Add to Cart</button></td>
-            </tr>
-            <tr>
-                <td><img src="images/Client3_Book2.png" alt="Book 2" width="50"></td>
-                <td class="body">Mountain Echoes</td>
-                <td><button type="button" onclick="addToCart('Mountain Echoes')">Add to Cart</button></td>
-            </tr>
-            </table>
+            <thead>
+                <tr>
+                    <th class="body-strong">Product</th>
+                    <th class="body-strong">Description</th>
+                    <th class="body-strong">Price</th>
+                    <th class="body-strong">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="images/Client3_Book1.png" alt="Book 1" width="60"></td>
+                    <td class="body">The Quiet Reader: A heartwarming tale.</td>
+                    <td class="body">$14.99</td>
+                    <td><button type="button" onclick="addToCart('The Quiet Reader')">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="images/Client3_Book2.png" alt="Book 2" width="60"></td>
+                    <td class="body">Mountain Echoes: An adventurous journey.</td>
+                    <td class="body">$16.50</td>
+                    <td><button type="button" onclick="addToCart('Mountain Echoes')">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="images/Client3_Book3.png" alt="Book 3" width="60"></td>
+                    <td class="body">City Lights: Urban architecture.</td>
+                    <td class="body">$18.00</td>
+                    <td><button type="button" onclick="addToCart('City Lights')">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="images/Client3_Magazine1.png" alt="Mag 1" width="60"></td>
+                    <td class="body">Literary Monthly: The latest reviews.</td>
+                    <td class="body">$8.00</td>
+                    <td><button type="button" onclick="addToCart('Literary Monthly')">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="images/Client3_Magazine2.png" alt="Mag 2" width="60"></td>
+                    <td class="body">Modern Poet: Contemporary verse.</td>
+                    <td class="body">$7.50</td>
+                    <td><button type="button" onclick="addToCart('Modern Poet')">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="images/Client3_Notebook.png" alt="Notebook" width="60"></td>
+                    <td class="body">Regal Quill Journal: Ivory paper.</td>
+                    <td class="body">$22.00</td>
+                    <td><button type="button" onclick="addToCart('Regal Quill Journal')">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="images/Client3_Stickers.png" alt="Stickers" width="60"></td>
+                    <td class="body">Reader's Decal Set: Laptop stickers.</td>
+                    <td class="body">$5.00</td>
+                    <td><button type="button" onclick="addToCart('Reader\'s Decals')">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="images/Client3_ToteBag.png" alt="Tote Bag" width="60"></td>
+                    <td class="body">Canvas Book Tote: Carry your library.</td>
+                    <td class="body">$12.99</td>
+                    <td><button type="button" onclick="addToCart('Canvas Tote Bag')">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="images/Logo.png" alt="Bookmark" width="60"></td>
+                    <td class="body">Haven Bookmark: A collectible.</td>
+                    <td class="body">$2.50</td>
+                    <td><button type="button" onclick="addToCart('Haven Bookmark')">Add to Cart</button></td>
+                </tr>
+            </tbody>
+        </table>
 
-        <div style="margin-top: 30px;">
+        <div style="margin-top: 40px; text-align: center; border-top: 2px solid #742C36; padding-top: 20px;">
             <button type="button" onclick="viewCart()">View Cart</button>
             <button type="button" onclick="clearCart()">Clear Cart</button>
         </div>
@@ -52,26 +103,34 @@
         <div id="cartModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal()">&times;</span>
-                <h3 class="title">Your Shopping Cart</h3>
+                <h3 class="title">Items in Your Cart</h3>
                 <ul id="cartList" class="body"></ul>
-                <button type="button" onclick="processOrder()">Process Order</button>
+                <div style="display: flex; gap: 10px;">
+                    <button type="button" onclick="processOrder()">Process Order</button>
+                    <button type="button" onclick="closeModal()">Continue Shopping</button>
+                </div>
             </div>
         </div>
     </main>
 
+    <footer>
+        <button type="button" onclick="alert('Thank you for subscribing.')">Subscribe</button>
+    </footer>
+
     <script>
-        // Use sessionStorage for the temporary shopping cart
+        // 1. Adds items to sessionStorage
         function addToCart(itemName) {
             let cart = JSON.parse(sessionStorage.getItem('bookHavenCart')) || [];
             cart.push(itemName);
             sessionStorage.setItem('bookHavenCart', JSON.stringify(cart));
-            alert(itemName + " has been added to your session cart.");
+            alert(itemName + " has been added to your cart.");
         }
 
+        // 2. Retrieves items from sessionStorage and displays them in the Modal
         function viewCart() {
             let cart = JSON.parse(sessionStorage.getItem('bookHavenCart')) || [];
             let cartList = document.getElementById("cartList");
-            cartList.innerHTML = ""; // Clear existing list
+            cartList.innerHTML = ""; // Clear list first
 
             if (cart.length === 0) {
                 cartList.innerHTML = "<li>Your cart is empty.</li>";
@@ -89,14 +148,16 @@
             document.getElementById("cartModal").style.display = "none";
         }
 
+        // 3. Clears all item information in sessionStorage
         function clearCart() {
             sessionStorage.removeItem('bookHavenCart');
-            alert("Session storage cleared. Cart is empty.");
+            alert("Your cart has been cleared.");
         }
 
+        // 4. Clears sessionStorage after "purchase"
         function processOrder() {
             sessionStorage.removeItem('bookHavenCart');
-            alert("Thank you for your order! Your session cart has been processed and cleared.");
+            alert("Thank you for your order! Your cart has been cleared.");
             closeModal();
         }
     </script>
