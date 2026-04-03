@@ -1,174 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery - Book Haven</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Book Haven - Gallery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <img src="images/Client3_Logo_Red.png" alt="Book Haven Red Logo">
+        <h1 class="display-title">Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="staff-picks.html">Staff Picks</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <header>
-    <div class="logo-title">
-      <img src="images/Logo.png" alt="Book Haven Logo" class="logo">
-      <h1 class="display-title">Book Haven Gallery</h1>
-    </div>
-    <button id="view-cart-btn">View Cart</button>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="staff-picks.html">Staff Picks</a></li>
-      </ul>
-    </nav>
-  </header>
+    <main>
+        <h2 class="title-large">Browse Our Items</h2>
+        <table class="gallery-table">
+            <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td><img src="images/Client3_Book1.png" alt="Book 1" width="50"></td>
+                <td class="body">The Quiet Reader: A bestseller in local fiction.</td>
+                <td><button type="button" onclick="alert('Item added to the cart.')">Add to Cart</button></td>
+            </tr>
+        </table>
 
-  <main>
-    <section>
-      <h2 class="title-large">Browse Our Collection</h2>
-      <p class="body">Explore our unique items and add them directly to your digital cart.</p>
-    </section>
+        <div style="margin-top: 30px;">
+            <button type="button" onclick="alert('Cart cleared.')">Clear Cart</button>
+            <button type="button" onclick="alert('Thank you for your order.')" style="margin-left:10px;">Process Order</button>
+        </div>
+    </main>
 
-    <section>
-      <table class="gallery-table">
-        <thead>
-          <tr>
-            <th class="body-strong">Product</th>
-            <th class="body-strong">Description</th>
-            <th class="body-strong">Price</th>
-            <th class="body-strong">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><img src="images/Client3_Book1.png" alt="Book 1 Cover"></td>
-            <td class="body"><strong>The Quiet Reader:</strong> A heartwarming story of discovery through literature.</td>
-            <td class="body">$15.99</td>
-            <td><button class="add-to-cart" onclick="addToCart('Book 1: The Quiet Reader')">Add to Cart</button></td>
-          </tr>
-          <tr>
-            <td><img src="images/Client3_Book2.png" alt="Book 2 Cover"></td>
-            <td class="body"><strong>Voices of History:</strong> A collection of inspiring letters from the 20th century.</td>
-            <td class="body">$21.00</td>
-            <td><button class="add-to-cart" onclick="addToCart('Book 2: Voices of History')">Add to Cart</button></td>
-          </tr>
-          <tr>
-            <td><img src="images/Client3_Notebook.png" alt="Notebook"></td>
-            <td class="body"><strong>Regal Quill Journal:</strong> Embossed leatherette notebook, 200 pages.</td>
-            <td class="body">$22.00</td>
-            <td><button class="add-to-cart" onclick="addToCart('Regal Quill Journal')">Add to Cart</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-  </main>
-
-  <footer>
-    <div class="newsletter">
-      <h4 class="subtitle">Subscribe to Our Newsletter</h4>
-      <input type="email" placeholder="Your Email Address">
-      <button>Subscribe</button>
-    </div>
-    <div class="social-links">
-      <h4 class="subtitle">Connect With Us</h4>
-      <a href="#" class="body">Facebook</a> |
-      <a href="#" class="body">Instagram</a> |
-      <a href="#" class="body">Twitter</a>
-    </div>
-    <div class="footer-nav">
-      <h4 class="subtitle">Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="staff-picks.html">Staff Picks</a></li>
-      </ul>
-    </div>
-  </footer>
-
-  <div id="cart-modal" class="modal">
-    <div class="modal-content">
-      <span class="close-modal">&times;</span>
-      <h3>Your Shopping Cart</h3>
-      <div id="cart-items-list" class="body">Your cart is empty.</div>
-      <div class="modal-actions">
-        <button id="clear-cart-btn" class="clear-cart">Clear Cart</button>
-        <button id="process-order-btn" class="process-order">Process Order</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // --- Shared Cart Logic (COPY OF JS FROM INDEX.HTML) ---
-    // (This code needs to be on every page to maintain cart state for the session)
-
-    // 1. Initial Cart State (This will reset if you navigate to a new full page load.
-    // In a real-world app, this would use localStorage or a server. For this task,
-    // this demonstrates the functionality within a single page context.)
-    let cart = [];
-
-    // 2. Select Elements
-    const viewCartBtn = document.getElementById('view-cart-btn');
-    const modal = document.getElementById('cart-modal');
-    const closeModal = document.querySelector('.close-modal');
-    const cartList = document.getElementById('cart-items-list');
-    const clearCartBtn = document.getElementById('clear-cart-btn');
-    const processOrderBtn = document.getElementById('process-order-btn');
-
-    // 3. Functions for Cart/Modal Interaction
-    
-    function updateCartDisplay() {
-      if (cart.length === 0) {
-        cartList.innerText = 'Your cart is empty.';
-      } else {
-        cartList.innerText = cart.join(', ');
-      }
-    }
-
-    function addToCart(itemName) {
-      cart.push(itemName);
-      alert('Item added'); // Requirement dialogue message
-      updateCartDisplay();
-    }
-
-    // 4. Event Listeners for the Modal
-    
-    // Open Modal
-    viewCartBtn.onclick = function() {
-      modal.style.display = "block";
-    }
-
-    // Close Modal when clicking (X)
-    closeModal.onclick = function() {
-      modal.style.display = "none";
-    }
-
-    // Close Modal when clicking outside the content area
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-
-    // Clear Cart Functionality
-    clearCartBtn.onclick = function() {
-      cart = [];
-      updateCartDisplay();
-      alert('Your cart has been cleared.');
-    }
-
-    // Process Order Functionality
-    processOrderBtn.onclick = function() {
-      if (cart.length > 0) {
-        alert('Thank you for your order!'); // Requirement dialogue message
-        cart = [];
-        updateCartDisplay();
-        modal.style.display = "none";
-      } else {
-        alert('Your cart is empty. Add items before ordering!');
-      }
-    }
-  </script>
+    <footer>
+        <button type="button" onclick="alert('Thank you for subscribing.')">Subscribe</button>
+    </footer>
 </body>
 </html>

@@ -1,176 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Haven - Literary Treasures and More</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Book Haven - Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <img src="images/Client3_Logo_Red.png" alt="Book Haven Red Logo">
+        <h1 class="display-title">Book Haven</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="staff-picks.html">Staff Picks</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <header>
-    <div class="logo-title">
-      <img src="images/Logo.png" alt="Book Haven Logo" class="logo">
-      <h1 class="display-title">Book Haven</h1>
-    </div>
-    <button id="view-cart-btn">View Cart</button>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="staff-picks.html">Staff Picks</a></li>
-      </ul>
-    </nav>
-  </header>
+    <main>
+        <section id="highlights">
+            <h2 class="title-large">Client Highlights</h2>
+            <p class="body-large">Book Haven is a local treasurer for book enthusiasts, offering a diverse selection of books, magazines, journals, and office supplies with a deep-rooted commitment to fostering literacy.</p>
+        </section>
 
-  <main>
-    <section class="highlights">
-      <h2 class="title-large">Client Highlights</h2>
-      <p class="body-large">A local treasure fostering a love for reading since 1995. Explore a curated selection of unique titles and local authors.</p>
-    </section>
+        <section id="promos">
+            <h3 class="title">Shopping Promos</h3>
+            <p class="body-strong" style="color: var(--romantic-red);">Spring Sale: All journals are 20% off this month!</p>
+        </section>
 
-    <section class="promos">
-      <h3 class="title">Shopping Promos</h3>
-      <p class="body">20% off all journals this month! BOGO on selects magazines.</p>
-    </section>
+        <section id="products">
+            <h3 class="title">Featured Products</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/Client3_Book1.png" alt="Book 1" width="100">
+                    <p class="caption">The Quiet Reader - $14.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/Client3_Notebook.png" alt="Notebook" width="100">
+                    <p class="caption">Regal Quill Journal - $18.50</p>
+                </div>
+            </div>
+        </section>
 
-    <section class="products">
-      <h3 class="title">Products</h3>
-      <div class="product-gallery">
-        <div class="product-item">
-          <img src="images/Client3_Book1.png" alt="Book 1 Cover">
-          <p class="caption">"The Quiet Reader" - $15.99</p>
+        <section id="perks">
+            <h3 class="title">Shopping Perks</h3>
+            <ul class="body">
+                <li>Free shipping on orders over $35</li>
+                <li>Complimentary gift wrapping</li>
+            </ul>
+        </section>
+
+        <section id="categories">
+            <h3 class="title">Product Categories</h3>
+            <p class="body">Fiction, Magazines, Journals, Office Supplies, Educational.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="newsletter">
+            <h4 class="subtitle">Subscribe to Newsletter</h4>
+            <input type="email" placeholder="email@address.com">
+            <button type="button" onclick="alert('Thank you for subscribing.')">Subscribe</button>
         </div>
-        <div class="product-item">
-          <img src="images/Client3_Magazine1.png" alt="Magazine 1 Cover">
-          <p class="caption">"Literary Monthly" - $8.50</p>
+        <div class="footer-links">
+            <h4 class="subtitle">Quick Links</h4>
+            <nav><a href="index.html">Home</a> | <a href="gallery.html">Gallery</a></nav>
         </div>
-        <div class="product-item">
-          <img src="images/Client3_Notebook.png" alt="Notebook">
-          <p class="caption">Embossed Journal - $22.00</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="perks">
-      <h3 class="title">Shopping Perks</h3>
-      <p class="body-strong">Free standard shipping on orders over $50!</p>
-    </section>
-
-    <section class="categories">
-      <h3 class="title">Categories</h3>
-      <ul>
-        <li><a href="#">Fiction</a></li>
-        <li><a href="#">Magazines</a></li>
-        <li><a href="#">Journals</a></li>
-        <li><a href="#">Office Supplies</a></li>
-        <li><a href="#">Gift Ideas</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <div class="newsletter">
-      <h4 class="subtitle">Subscribe to Our Newsletter</h4>
-      <input type="email" placeholder="Your Email Address">
-      <button>Subscribe</button>
-    </div>
-    <div class="social-links">
-      <h4 class="subtitle">Connect With Us</h4>
-      <a href="#" class="body">Facebook</a> |
-      <a href="#" class="body">Instagram</a> |
-      <a href="#" class="body">Twitter</a>
-    </div>
-    <div class="footer-nav">
-      <h4 class="subtitle">Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="staff-picks.html">Staff Picks</a></li>
-      </ul>
-    </div>
-  </footer>
-
-  <div id="cart-modal" class="modal">
-    <div class="modal-content">
-      <span class="close-modal">&times;</span>
-      <h3>Your Shopping Cart</h3>
-      <div id="cart-items-list" class="body">Your cart is empty.</div>
-      <div class="modal-actions">
-        <button id="clear-cart-btn" class="clear-cart">Clear Cart</button>
-        <button id="process-order-btn" class="process-order">Process Order</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // 1. Initial Cart State
-    let cart = [];
-
-    // 2. Select Elements
-    const viewCartBtn = document.getElementById('view-cart-btn');
-    const modal = document.getElementById('cart-modal');
-    const closeModal = document.querySelector('.close-modal');
-    const cartList = document.getElementById('cart-items-list');
-    const clearCartBtn = document.getElementById('clear-cart-btn');
-    const processOrderBtn = document.getElementById('process-order-btn');
-
-    // 3. Functions for Cart/Modal Interaction
-    
-    function updateCartDisplay() {
-      if (cart.length === 0) {
-        cartList.innerText = 'Your cart is empty.';
-      } else {
-        cartList.innerText = cart.join(', ');
-      }
-    }
-
-    function addToCart(itemName) {
-      cart.push(itemName);
-      alert('Item added'); // Requirement dialogue message
-      updateCartDisplay();
-    }
-
-    // 4. Event Listeners for the Modal
-    
-    // Open Modal
-    viewCartBtn.onclick = function() {
-      modal.style.display = "block";
-    }
-
-    // Close Modal when clicking (X)
-    closeModal.onclick = function() {
-      modal.style.display = "none";
-    }
-
-    // Close Modal when clicking outside the content area
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-
-    // Clear Cart Functionality
-    clearCartBtn.onclick = function() {
-      cart = [];
-      updateCartDisplay();
-      alert('Your cart has been cleared.');
-    }
-
-    // Process Order Functionality
-    processOrderBtn.onclick = function() {
-      if (cart.length > 0) {
-        alert('Thank you for your order!'); // Requirement dialogue message
-        cart = [];
-        updateCartDisplay();
-        modal.style.display = "none";
-      } else {
-        alert('Your cart is empty. Add items before ordering!');
-      }
-    }
-
-  </script>
+    </footer>
 </body>
 </html>
