@@ -5,31 +5,88 @@
     <title>Book Haven - Staff Picks</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <img src="images/Client3_Logo_Red.png" alt="Book Haven Red Logo">
         <h1 class="display-title">Staff Picks</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="staff-picks.html">Staff Picks</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section>
-            <h2 class="title-large">Customer Testimonials</h2>
-            <p class="body-large">"I found the most beautiful journal here!" - Sarah J.</p>
+        <h2 class="title-large">Meet Our Staff & Their Favorite Reads</h2>
+
+        <!-- Staff Member 1 -->
+        <section class="product-grid">
+            <div class="product-card">
+                <img src="images/Client3_Notebook.png" alt="Emily Carter" width="120">
+                <h3 class="title">Emily Carter</h3>
+                <p class="subtitle">Senior Curator</p>
+                <p class="body">“I love tools that inspire creativity. This journal is my go‑to for daily reflections.”</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Client3_Book1.png" alt="The Quiet Reader" width="120">
+                <h4 class="subtitle">Staff Pick</h4>
+                <p class="body-strong">The Quiet Reader</p>
+                <p class="body">A heartwarming tale about finding peace in unexpected places.</p>
+            </div>
         </section>
 
-        <section>
-            <h3 class="title">Community Involvement</h3>
-            <p class="body">We donate 5% of all office supply sales to local schools.</p>
+        <!-- Staff Member 2 -->
+        <section class="product-grid">
+            <div class="product-card">
+                <img src="images/Client3_Magazine1.png" alt="Marcus Hale" width="120">
+                <h3 class="title">Marcus Hale</h3>
+                <p class="subtitle">Literature Specialist</p>
+                <p class="body">“I’m always searching for fresh perspectives. This magazine delivers every month.”</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Client3_Book2.png" alt="Mountain Echoes" width="120">
+                <h4 class="subtitle">Staff Pick</h4>
+                <p class="body-strong">Mountain Echoes</p>
+                <p class="body">An adventurous journey through rugged landscapes and inner strength.</p>
+            </div>
         </section>
 
-        <section>
-            <h3 class="title">Events</h3>
-            <p class="body">Book Club: Every first Tuesday at 7:00 PM.</p>
+        <!-- Staff Member 3 -->
+        <section class="product-grid">
+            <div class="product-card">
+                <img src="images/Client3_ToteBag.png" alt="Jenna Brooks" width="120">
+                <h3 class="title">Jenna Brooks</h3>
+                <p class="subtitle">Community Coordinator</p>
+                <p class="body">“I carry this tote everywhere — it’s perfect for books, groceries, and life.”</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/Client3_Book3.png" alt="City Lights" width="120">
+                <h4 class="subtitle">Staff Pick</h4>
+                <p class="body-strong">City Lights</p>
+                <p class="body">A thoughtful look at urban architecture and the stories behind it.</p>
+            </div>
         </section>
     </main>
 
     <footer>
-        <button type="button" onclick="alert('Thank you for subscribing.')">Subscribe</button>
+        <div class="newsletter">
+            <h4 class="subtitle">Subscribe to Newsletter</h4>
+            <input type="email" placeholder="email@address.com">
+            <button type="button" onclick="alert('Thank you for subscribing.')">Subscribe</button>
+        </div>
+
+        <div class="footer-links">
+            <h4 class="subtitle">Quick Links</h4>
+            <nav><a href="index.html">Home</a> | <a href="gallery.html">Gallery</a></nav>
+        </div>
     </footer>
 </body>
 </html>
