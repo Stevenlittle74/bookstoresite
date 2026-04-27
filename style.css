@@ -1,57 +1,165 @@
-/* --- style.css --- */
+/* --- style.css (Palette 1 + Typography Option 2) --- */
+
+/* COLOR PALETTE 1 */
 :root {
-  --midnight-blue: #2E2E4E;
-  --regal-quill: #5C2E5C;
-  --literature-blue: #3F5461;
-  --book-worm: #3E5641;
-  --romantic-red: #742C36;
-  --vintage-paper: #C1CFD6;
+  --inkwell-blue: #2E4057;
+  --dusty-rose: #F7B3CC;
+  --aged-gold: #C7B65E;
+  --parchment-white: #FFF7EE;
+  --bookish-black: #131C26;
 }
 
-body { background-color: #fdfaf5; margin: 0; padding: 0; color: var(--literature-blue); line-height: 1.6; }
-
-/* Header and Navigation */
-header { 
-    background-color: var(--midnight-blue); 
-    padding: 20px; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+/* GLOBAL */
+body {
+  background-color: var(--parchment-white);
+  margin: 0;
+  padding: 0;
+  color: var(--bookish-black);
+  line-height: 1.6;
+  font-family: Calibri, sans-serif; /* Typography Option 2 body font */
 }
-header img { height: 70px; width: auto; }
-nav ul { list-style: none; display: flex; gap: 20px; }
-nav a { color: var(--vintage-paper); text-decoration: none; font-weight: bold; }
 
-/* Typography Requirements */
-.display-title { font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 40px; color: var(--vintage-paper); margin: 0; }
-.title-large { font-family: Georgia, serif; font-weight: bold; font-size: 30px; margin-top: 20px; }
-.title { font-family: Arial, bold, sans-serif; font-weight: bold; font-size: 25px; }
-.subtitle { font-family: Arial, bold, sans-serif; font-weight: bold; font-size: 15px; }
-.body-large { font-family: 'Comic Sans MS', cursive; font-weight: normal; font-size: 20px; }
-.body-strong { font-family: Arial, bold, sans-serif; font-weight: bold; font-size: 16px; }
-.body { font-family: Arial, normal, sans-serif; font-weight: normal; font-size: 16px; }
-.caption { font-family: Calibri, normal, sans-serif; font-weight: normal; font-size: 11px; }
+/* HEADER + NAV */
+header {
+  background-color: var(--inkwell-blue);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-/* Sections & Layout */
-main { padding: 40px; max-width: 1100px; margin: auto; }
-section { margin-bottom: 40px; border-bottom: 1px solid #ddd; padding-bottom: 20px; }
-.product-grid { display: flex; gap: 20px; flex-wrap: wrap; }
-.product-card { border: 1px solid #ccc; padding: 10px; background: white; text-align: center; }
+header img {
+  height: 70px;
+  width: auto;
+}
 
-/* Gallery Table */
-.gallery-table { width: 100%; border-collapse: collapse; }
-.gallery-table th, .gallery-table td { border: 1px solid #ccc; padding: 15px; text-align: left; }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
 
-/* Footer */
-footer { background-color: var(--literature-blue); color: white; padding: 40px; display: flex; justify-content: space-between; }
-footer a { color: white; text-decoration: none; }
+nav a {
+  color: var(--dusty-rose);
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
 
-/* Button Styles */
-button { 
-    background-color: var(--romantic-red); 
-    color: white; 
-    border: none; 
-    padding: 10px 20px; 
-    cursor: pointer; 
-    font-weight: bold; 
+/* TYPOGRAPHY (Typography Option 2) */
+.display-title {
+  font-family: Arial, sans-serif; /* Arial Bold */
+  font-weight: bold;
+  font-size: 40px;
+  color: var(--dusty-rose);
+  margin: 0;
+}
+
+.title-large {
+  font-family: Arial, sans-serif; /* Arial Bold */
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.title {
+  font-family: Arial, sans-serif; /* Arial Bold */
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.subtitle {
+  font-family: 'Comfortaa', sans-serif; /* Comfortaa */
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.body-large {
+  font-family: Calibri, sans-serif;
+  font-size: 20px;
+}
+
+.body-strong {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.body {
+  font-family: Calibri, sans-serif;
+  font-size: 16px;
+}
+
+.caption {
+  font-family: Calibri, sans-serif;
+  font-size: 11px;
+}
+
+/* LAYOUT */
+main {
+  padding: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--aged-gold);
+  padding-bottom: 20px;
+}
+
+.product-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  border: 1px solid var(--aged-gold);
+  padding: 10px;
+  background: white;
+  text-align: center;
+}
+
+/* GALLERY TABLE */
+.gallery-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.gallery-table th,
+.gallery-table td {
+  border: 1px solid var(--aged-gold);
+  padding: 15px;
+  text-align: left;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--inkwell-blue);
+  color: var(--dusty-rose);
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer a {
+  color: var(--dusty-rose);
+  text-decoration: none;
+}
+
+/* BUTTONS */
+button {
+  background-color: var(--aged-gold);
+  color: var(--bookish-black);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+button:hover {
+  background-color: var(--dusty-rose);
+  color: var(--inkwell-blue);
 }
