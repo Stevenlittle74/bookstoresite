@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const data = JSON.parse(localStorage.getItem("customOrder"));
+
+            if (data) {
+                document.getElementById("name").textContent = data.name;
+                document.getElementById("email").textContent = data.email;
+                document.getElementById("phone").textContent = data.phone;
+                document.getElementById("address").textContent = data.address;
+                document.getElementById("details").textContent = data.details;
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1 class="display-title">Order Confirmation</h1>
+    </header>
+
+    <main>
+        <h2 class="title-large">Thank you for your order!</h2>
+
+        <p class="body"><strong>Name:</strong> <span id="name"></span></p>
+        <p class="body"><strong>Email:</strong> <span id="email"></span></p>
+        <p class="body"><strong>Phone:</strong> <span id="phone"></span></p>
+        <p class="body"><strong>Address:</strong> <span id="address"></span></p>
+        <p class="body"><strong>Order Details:</strong> <span id="details"></span></p>
+    </main>
+</body>
+</html>

@@ -52,3 +52,18 @@ function processOrder() {
     alert("Thank you for your order! Your cart has been cleared.");
     closeModal();
 }
+function saveCustomOrder(event) {
+    event.preventDefault();
+
+    const orderData = {
+        name: document.getElementById("customerName").value,
+        email: document.getElementById("customerEmail").value,
+        phone: document.getElementById("customerPhone").value,
+        address: document.getElementById("customerAddress").value,
+        details: document.getElementById("orderDetails").value
+    };
+
+    localStorage.setItem("customOrder", JSON.stringify(orderData));
+
+    window.location.href = "confirmation.html";
+}

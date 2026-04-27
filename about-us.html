@@ -2,52 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About Us - Book Haven</title>
+    <title>Book Haven - About Us</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
+
+    <!-- HEADER WITH NAV + CART BUTTON -->
     <header>
         <img src="images/Client3_Logo_Red.png" alt="Book Haven Red Logo">
         <h1 class="display-title">About Us</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="staff-picks.html">Staff Picks</a></li>
+            </ul>
+
+            <button onclick="openCart()" class="cart-button">Cart</button>
+        </nav>
     </header>
 
     <main>
-        <section id="feedback">
-            <h3 class="title">Custom Order Form</h3>
-            <form id="orderForm">
+        <section>
+            <h2 class="title-large">Our Mission</h2>
+            <p class="body">
+                Book Haven is committed to fostering literacy, supporting local schools, and providing a welcoming
+                space for readers of all ages. We believe in the power of stories and the importance of community.
+            </p>
+        </section>
+
+        <!-- CUSTOMER FORM (LOCALSTORAGE REQUIREMENT) -->
+        <section>
+            <h2 class="title-large">Custom Order Form</h2>
+
+            <form id="customOrderForm" onsubmit="saveCustomOrder(event)">
                 <label class="body-strong">Customer Name:</label><br>
-                <input type="text" id="custName" required style="width:100%; margin-bottom:10px;"><br>
-                
+                <input type="text" id="customerName" class="body" required><br><br>
+
+                <label class="body-strong">Email:</label><br>
+                <input type="email" id="customerEmail" class="body" required><br><br>
+
+                <label class="body-strong">Phone:</label><br>
+                <input type="tel" id="customerPhone" class="body" required><br><br>
+
+                <label class="body-strong">Address:</label><br>
+                <input type="text" id="customerAddress" class="body" required><br><br>
+
                 <label class="body-strong">Custom Order Details:</label><br>
-                <textarea id="orderDetails" required style="width:100%; height:100px; margin-bottom:10px;"></textarea><br>
-                
-                <button type="button" onclick="saveCustomOrder()">Submit Custom Order</button>
+                <textarea id="orderDetails" class="body" required></textarea><br><br>
+
+                <button type="submit">Submit Custom Order</button>
             </form>
         </section>
     </main>
 
-    <script>
-        // Use localStorage for permanent customer information
-        function saveCustomOrder() {
-            const name = document.getElementById("custName").value;
-            const details = document.getElementById("orderDetails").value;
+    <!-- FOOTER -->
+    <footer>
+        <div class="newsletter">
+            <h4 class="subtitle">Subscribe to Newsletter</h4>
+            <input type="email" placeholder="email@address.com">
+            <button type="button" onclick="alert('Thank you for subscribing.')">Subscribe</button>
+        </div>
 
-            if (name && details) {
-                const customOrder = {
-                    customerName: name,
-                    orderInfo: details,
-                    timestamp: new Date().toLocaleString()
-                };
+        <div class="footer-links">
+            <h4 class="subtitle">Quick Links</h4>
+            <nav><a href="index.html">Home</a> | <a href="gallery.html">Gallery</a></nav>
+        </div>
+    </footer>
 
-                // Save to localStorage (persists even if browser closes)
-                localStorage.setItem('savedCustomOrder', JSON.stringify(customOrder));
-                
-                alert("Success! Custom order for " + name + " has been saved to local storage.");
-                document.getElementById("orderForm").reset();
-            } else {
-                alert("Please fill out both fields before submitting.");
-            }
-        }
-    </script>
 </body>
 </html>
+
